@@ -1,0 +1,95 @@
+A description of how your main program works
+Step 1
+The first step is to check the length of the arguments. If the length is not 
+equal to 2(it includes the name of the progaram) the program will exit and will
+print the usage function. The usage function will return the output, that will
+explain the usage of script.
+
+Step 2
+In step 2 we have to define our variables, that are required for the program 
+to work properly. We need to define the name of the months which will include
+all the month names in three letter format. for example Jan,Feb.After this we
+have to define number of days in each month of the year. For example January 
+have 31 days every year so we will write number of the month in the year and 
+number of days it has.
+At the last line we are defining a variable for user's input. This will fetch
+whatever user will type beside the name of the program.
+
+Step 3
+In this step we are defining a variable that will limit the user to enter
+only the decimal numbers between 0-9.
+In the next line we are defining a variable to modify how our final output 
+will look like. We are using our validation function sanitize() to refine
+what user entered and at the same time we are limiting the user to enter what
+we defined earlier that is the number of characters allowed.
+In the last line we are printing the reifined user data.
+
+Step 4
+In this step we are defining a variable that will check if user has entered
+the date of birth, keeping in view the number of characters allowed. We are
+using the if statement to check the result, if it is false the program will
+exit by giving an error to the user.
+
+Step 5
+
+We will define the year,month and day in the format we want the data to be 
+converted entered by the user. We want the year to have four digits,month 
+must have 2 digits, the program will convert it to the corresponding
+three letter abbreviated month name and day will have two digits and
+the program will convert it to one digit if the day falls between 1-9.
+
+Step 6
+
+(1) This will define the range for the birth year. If the user enters the year
+less than or greater than the specified range, the program will exit by giving
+appropriate error.
+(2) This will define the range for the month. If the number of the month
+does not fall between the calendar months, the program will exit by giving an
+error
+(3) Checks weather the year is leap year or not. Any year is a leap year whose
+february has more than 29 days
+(4) This will determine if the day entered for the specific month is within
+the range, the number of days that month can have.
+
+Step 7
+In this step we will arrange all the data into the required format which is 
+mmm d, yyyy
+
+Step 8
+At last, we will print the output to the screen.
+
+An algorithm for each validation function named in the a1_template.py file.
+
+(1) leap_year():
+This function will take any year as an input in the format yyyy and will return
+the output as 'True' or 'False'. If the output is true it means that the year
+entered is a leap year and vice versa.
+
+(2) range_check():
+This function will check if the entered month,year and day is within the
+specified range. The way it will work is that it will take an integer object
+and a tuple with two integer values. The output will be 'True' if the integer 
+object weather it is year,day or month falls in betweeen the range specified
+in the tuple.
+
+(3) sanitize():
+This function will take two string objects as an input. The first object is the
+object to be sanitized, and the second object will contain the letters that are
+allowed in the program.The function will return the first string object in
+such a way that it will display only the letters that are stored in the 
+second object and the letters in the first object removed.
+
+(4) size_check():
+Ths function will take an collection data type object and expected number of 
+items as an integer and will return either 'True' or 'False'. 
+If the quantity of items in the data object coordinates with the integer 
+value given, it will return 'True', otherwise it will return 'False'
+
+(5) usage():
+ 
+The usage() function will take nothing as an input and will
+return a string depicting the use of the script.
+
+
+
+
